@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+body {
+	background-color: #ededed;
+}
+h1{
+	text-align: left;
+	font-size: 50px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  border: 3px solid Black;
+}
+
+th{
+	text-align: left;
+  	vertical-align: middle;  
+  	border: 2px groove #000000;
+  	font-size: 20px;
+}
+
+td{
+	padding: 10px;
+	border-bottom: 2px solid #000000;
+  	border-right: 2px solid #000000;
+  	font-size: 1em;
+}
+
+
+tbody tr:nth-child(even) {
+  background-color: rgb(194, 194, 194);
+}
+
+.editInput {
+	border: 2px groove #000000;
+	box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.3);
+	font-size: 1em;
+}
+
+#headRow{
+	position: sticky;
+	top: 20px;
+	background-color: white;
+}
+
+.searchBox{
+	border-radius: 10px 0px 0px 0px;
+	border: 2px inset #000000;
+	width: 30%;
+	padding: 3px;
+}
+#searchInput{
+	width: 80%;
+}
+#searchBtn{
+	width: 15%;
+}
+
+.actionButton{
+	border-radius: 10px 0px 0px 0px;
+	border: 2px inset #000000;
+}
+
+.editButton{
+	border-radius: 10px 0px 0px 0px;
+	border: 2px inset #000000;
+}
