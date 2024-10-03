@@ -25,6 +25,11 @@ private DataSource dataSource;
 		PreparedStatement myStmt = null;
 		ResultSet myRs = null;
 		
+		// check searchTerm wildcard
+		if(searchTerm.contains("*")) {
+			searchTerm = searchTerm.replace("*", "%");
+		}
+		
 		try {
 			myConn = dataSource.getConnection();
 			//create SQL statements
@@ -126,6 +131,7 @@ private DataSource dataSource;
 		
 	}
 	
+//	
 	
 	public void updateItem(Item itemInfo) throws Exception{ 
 		Connection myConn = null;

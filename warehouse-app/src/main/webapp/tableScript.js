@@ -10,10 +10,10 @@ editButtonList.forEach((tr) => {
 		const row = e.target.closest("tr");
 		const cellList= row.querySelectorAll('.canEdit');
 		
-		cellList.forEach((td, i) => {
+		cellList.forEach((td) => {
 			const value = td.textContent;
-			var inputName = td.dataset.inputName;
-			var newInput = document.createElement("input");
+			const inputName = td.dataset.inputName;
+			const newInput = document.createElement("input");
 			newInput.setAttribute("value", value);
 			newInput.setAttribute("name", inputName);
 			newInput.setAttribute("class", "editInput")
@@ -49,10 +49,17 @@ function createButtons(){
 	cancelBtn.setAttribute("id", "cancelBtn");
 	cancelBtn.setAttribute("class", "actionButton");
 	
-	cancelBtn.addEventListener('click', function (e) {
-		location.reload();
-		/*buttonDiv.remove();
-		editButtonList.forEach((tr) => {tr.hidden = false;})*/
+	cancelBtn.addEventListener('click', function () {
+		buttonDiv.remove();
+		editButtonList.forEach((tr) => {tr.hidden = false;})
+		
+		const cellList= document.querySelectorAll('.editInput');
+		cellList.forEach((td) => {
+				const value = td.value;
+				const newNode = document.createTextNode(value);
+				td.replaceWith(newNode);
+				})
+		
 	})
 	buttonDiv.appendChild(cancelBtn);
 	

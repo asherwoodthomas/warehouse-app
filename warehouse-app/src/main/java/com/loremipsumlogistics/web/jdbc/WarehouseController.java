@@ -60,9 +60,6 @@ public class WarehouseController extends HttpServlet {
 			case "ADD":
 				addItem(request, response);
 				break;
-//			case "LOAD":
-//				loadItem(request, response);
-//				break;
 			case "UPDATE":
 				updateItem(request, response);
 				break;

@@ -52,16 +52,16 @@
 			<tr>
 				<td>#</td>
 				<td><input type="text" name="productName" required
-					form="addItem" class="editInput"></td>
+					form="addItem" class="addInput"></td>
 				<td><input type="text" name="productDescription" required
-					form="addItem" class="editInput"></td>
+					form="addItem" class="addInput"></td>
 				<td><input type="number" name="retailPrice" required
-					form="addItem" class="editInput"></td>
+					form="addItem" class="addInput"></td>
 				<td><input type="number" name="quantityOnHand" required
 					form="addItem" min="-32768" max="32767" onchange=enforceMinMax
-					class="editInput"></td>
+					class="addInput"></td>
 				<td><input type="number" name="categoryID" required
-					form="addItem" class="editInput"></td>
+					form="addItem" class="addInput"></td>
 				<td><input type="submit" value="Add Item" form="addItem"
 					id="addItemSubmit"></td>
 			</tr>
