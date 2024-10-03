@@ -141,7 +141,6 @@ private DataSource dataSource;
 			//get db conn
 			myConn = dataSource.getConnection();
 			//create SQL statement
-			//update products set ProductName="bob", ProductDescription="bob", RetailPrice=1, QuantityOnHand=1, CategoryID=1 where productNumber=42;
 			String sql = "update products set ProductName=?, ProductDescription=?, RetailPrice=?, QuantityOnHand=? where productNumber=?";
 			myStmt = myConn.prepareStatement(sql);
 			//set param values for item
