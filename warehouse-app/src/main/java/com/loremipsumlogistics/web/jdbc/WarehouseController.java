@@ -54,7 +54,6 @@ public class WarehouseController extends HttpServlet {
 			// rout to the appropriate method
 			switch (theCommand) {
 			case "SEARCH":
-				// list the students in MVC fashion
 				searchItem(request, response);
 				break;
 			case "ADD":
