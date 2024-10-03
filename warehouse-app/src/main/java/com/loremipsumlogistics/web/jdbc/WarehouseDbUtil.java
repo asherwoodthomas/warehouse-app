@@ -48,9 +48,9 @@ private DataSource dataSource;
 					int quantityOnHand = myRs.getInt("QuantityOnHand");
 					int categoryID = myRs.getInt("CategoryID");
 					
-					//create new Student bean
+					//create new Item bean
 					Item tempItem = new Item(productNumber, productName, productDescription, retailPrice, quantityOnHand, categoryID);
-					//add bean to List<Student>
+					//add bean to List
 					items.add(tempItem);
 				}
 			
